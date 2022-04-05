@@ -1,13 +1,13 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Glory_Old_Flag_2._0.Data;
+using OldGloryLPB.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<Glory_Old_Flag_2_0Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Glory_Old_Flag_2_0Context")));
+builder.Services.AddDbContext<OldGloryLPBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("OldGloryLPBContext")));
 
 var app = builder.Build();
 
